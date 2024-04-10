@@ -41,19 +41,17 @@ public static void main(String[] args){
         Add ob1 = new Add();
         int s=ob1.sum(13,26);
         Subtract ob2 = new Subtract();
-        int a= ob2.diff(7,3);
+        int a= ob2.diff(17,3);
         mult ob3 = new mult();
         int b= ob3.Product(5,4);
         div ob = new div();
-        double c= ob.Quotient(10,5);
+        double c= ob.Quotient(25,5);
+        System.out.println("sum value:" + s ) ;
         System.out.println("Subtracted value:" + a ) ;
         System.out.println("Multiplied  value:" + b ) ;
-        System.out.println("sum value:" + s ) ;
         System.out.println("Divided value:" + c ) ;
-
 }
 }
-
 
 
 
