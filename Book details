@@ -1,0 +1,63 @@
+import java.util.*;
+class Publisher{
+    protected String name;
+    public Publisher(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+}
+class Book {
+    protected String title;
+    protected int year;
+    protected Publisher publisher;
+    public Book(String title, int year, Publisher publisher) {
+        this.title = title;
+        this.year = year;
+        this.publisher = publisher;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public int getYear() {
+        return year;
+    }
+    public Publisher getPublisher() {
+        return publisher;
+    }
+    public void printDetails() {
+        System.out.println("Title: " + title);
+        System.out.println("Year: " + year);
+        System.out.println("Publisher: " + publisher.getName());
+    }
+}
+class Literature extends Book {
+    public Literature(String title, int year, Publisher publisher) {
+        super(title, year, publisher);
+    }
+}
+class Fiction extends Book {
+    public Fiction(String title, int year, Publisher publisher) {
+        super(title, year, publisher);
+    }
+}
+public class book_details {
+    public static void main(String[] args) {
+        Publisher p1 = new Publisher("Publisher A");
+        Publisher p2 = new Publisher("Publisher B");
+        Literature literature1 = new Literature("Literature Book 1", 2000, p1);
+        Literature literature2 = new Literature("Literature Book 2", 2010, p2);
+        Fiction fiction1 = new Fiction("Fiction Book 1", 2005, p1);
+        Fiction fiction2 = new Fiction("Fiction Book 2", 2015, p2);
+        List<Book> books = new ArrayList<>();
+        books.add(literature1);
+        books.add(literature2);
+        books.add(fiction1);
+        books.add(fiction2);
+        for (Book book : books) {
+            book.printDetails();
+            System.out.println();
+        }
+    }
+}
