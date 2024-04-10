@@ -1,0 +1,61 @@
+Add.java::
+package Arithmetic;
+public class Add{
+    public int sum(int x,int y){
+        return x+y;
+    }
+}
+
+
+div.java::
+package Arithmetic;
+public class div{
+    public int Quotient(int x, int y){
+        return x/y;
+    } 
+}
+
+
+mult.java::
+package Arithmetic;
+public class mult{
+    public int Product(int x,int y){
+        return x*y; 
+    }
+}
+
+
+Subtract.java::
+package Arithmetic;
+public class Subtract{
+    public int diff(int x,int y){
+        return x-y;
+    }
+}
+
+
+Operations.java::
+import Arithmetic.*;
+class Operations{
+public static void main(String[] args){
+        Add ob1 = new Add();
+        int s=ob1.sum(13,26);
+        Subtract ob2 = new Subtract();
+        int a= ob2.diff(7,3);
+        mult ob3 = new mult();
+        int b= ob3.Product(5,4);
+        div ob = new div();
+        double c= ob.Quotient(10,5);
+        System.out.println("Subtracted value:" + a ) ;
+        System.out.println("Multiplied  value:" + b ) ;
+        System.out.println("sum value:" + s ) ;
+        System.out.println("Divided value:" + c ) ;
+
+}
+}
+
+
+
+
+
+
