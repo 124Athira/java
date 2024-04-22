@@ -19,6 +19,9 @@ class CopyFile {
  }
 }
 
+at.txt:
+hello world!!
+
 OUTPUT:
 C:\Users\mlm\Desktop\Athira>javac CopyFile.java
 C:\Users\mlm\Desktop\Athira>java CopyFile
